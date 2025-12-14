@@ -64,3 +64,5 @@ Route::post('/api/rsvp/{code}', function ($code, \Illuminate\Http\Request $reque
 
     return response()->json(['message' => 'RSVP submitted successfully']);
 });
+
+Route::get('/dashboard', function ($code) {dd('test');})->name('dashboard');
