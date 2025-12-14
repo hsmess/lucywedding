@@ -22,7 +22,7 @@ const props = defineProps<{
         <Header />
 
         <!-- Page content -->
-        <main class="grow">
+        <main class="grow mb-6">
             <Hero />
             <Venue />
             <Gallery />
@@ -35,7 +35,7 @@ const props = defineProps<{
         </main>
 
         <!-- Site footer -->
-         <Footer year="2025" />
+<!--         <Footer year="2025" />-->
 
     </div>
 </template>
