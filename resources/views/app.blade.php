@@ -14,6 +14,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
 
+
+    <head>
+        <!-- Existing head content -->
+
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Lucy & Greg - Wedding - 27th June 2026">
+        <meta property="og:description" content="Join us to celebrate our wedding in Liverpool">
+        <meta property="og:image" content="https://aardvark-cdn.s3.eu-west-2.amazonaws.com/82707EAE-117A-407D-B46F-A6ADA6E8952B.jpeg">
+        <meta property="og:url" content="{{ url()->current() }}">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Lucy & Greg - Wedding - 27th June 2026">
+        <meta name="twitter:description" content="Join us to celebrate our wedding in Liverpool">
+        <meta name="twitter:image" content="https://aardvark-cdn.s3.eu-west-2.amazonaws.com/82707EAE-117A-407D-B46F-A6ADA6E8952B.jpeg">
+    </head>
+
+
+
     @vite(['resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
     @inertiaHead
 </head>
