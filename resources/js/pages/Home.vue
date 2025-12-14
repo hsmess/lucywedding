@@ -6,7 +6,8 @@ import Hotels from '@/pages/Hotels.vue';
 import Registry from '@/pages/Registry.vue';
 import Taxis from '@/pages/Taxis.vue';
 import Form from '@/pages/Form.vue';
-// import Footer from '@/components/Footer.vue';
+import Footer from '@/pages/Footer.vue';
+import Gallery from '@/pages/Gallery.vue';
 
 const props = defineProps<{
     code?: string;
@@ -24,15 +25,17 @@ const props = defineProps<{
         <main class="grow">
             <Hero />
             <Venue />
+            <Gallery />
             <Hotels/>
             <Registry/>
             <Taxis/>
             <Form :code="props.code" :people="props.people"/>
+
             <!-- Other sections will go here -->
         </main>
 
         <!-- Site footer -->
-        <!-- <Footer /> -->
+         <Footer year="2025" />
 
     </div>
 </template>
