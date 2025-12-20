@@ -33,7 +33,14 @@
                             <p class="mb-2">Saturday, 27th June 2026</p>
                             <p>Liverpool</p>
                         </div>
-
+                        <div class="pt-2">
+                            <a
+                                href="#rsvp"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-[#2B1105] text-[#FCF9F7] font-montaga rounded-lg hover:bg-[#2B1105]/90 transition-colors"
+                            >
+                                RSVP now
+                            </a>
+                        </div>
 
                     </div>
 
@@ -41,7 +48,6 @@
                     <div v-if="floralImage" class="hidden md:block absolute -bottom-8 -left-8 md:-left-16 w-48 md:w-64 opacity-90 pointer-events-none transform scale-x-[-1]">
                         <img :src="floralImage" alt="Floral decoration" class="w-full h-auto" />
                     </div>
-
                 </div>
             </div>
         </div>

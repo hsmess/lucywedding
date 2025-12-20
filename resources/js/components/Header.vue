@@ -31,15 +31,16 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#registry" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
-                                Registry
+                            <a href="#itinerary" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                                Itinerary
                             </a>
                         </li>
                         <li>
-                            <a href="#rsvp" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
-                                RSVP
+                            <a href="#taxis" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                                Taxis
                             </a>
                         </li>
+
 
                     </ul>
                 </nav>

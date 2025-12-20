@@ -8,6 +8,7 @@ import Taxis from '@/pages/Taxis.vue';
 import Form from '@/pages/Form.vue';
 import Footer from '@/pages/Footer.vue';
 import Gallery from '@/pages/Gallery.vue';
+import Itinerary from '@/pages/Itinerary.vue';
 
 const props = defineProps<{
     code?: string;
@@ -27,6 +28,7 @@ const props = defineProps<{
             <Venue />
             <Gallery />
             <Hotels/>
+            <Itinerary/>
             <Registry/>
             <Taxis/>
             <Form :code="props.code" :people="props.people"/>
