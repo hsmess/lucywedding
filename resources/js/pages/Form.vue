@@ -17,6 +17,7 @@ interface Guest {
 const props = defineProps<{
     code?: string;
     people?: Guest[];
+    submitted_be?: boolean;
 }>();
 
 const floralImage = ref('https://aardvark-cdn.s3.eu-west-2.amazonaws.com/floral.png');
@@ -45,7 +46,7 @@ console.log('Initialized guests:', guests.value);
 const loading = ref(false);
 const error = ref('');
 const submitting = ref(false);
-const submitted = ref(false);
+const submitted = ref(props.submitted_be);
 
 const fetchInvitation = async () => {
     if (!invitationCode.value.trim()) {
@@ -290,6 +291,7 @@ const canAddPlusOne = (guest: Guest, index: number) => {
                         <h2 class="text-3xl md:text-4xl font-montaga text-[#FCF9F7] mb-4">Thank You!</h2>
                         <p class="text-[#FCF9F7]/70 font-montaga text-lg">
                             Your RSVP has been submitted successfully. We can't wait to celebrate with you!
+                            If you would like to make any changes to your RSVP, please email lucy.fleming96@gmail.com or phone 07592 594606
                         </p>
                     </div>
 

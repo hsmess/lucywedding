@@ -9,6 +9,7 @@ Route::get('/', function(\Illuminate\Http\Request $request){
     $invitation =  \App\Models\Invitation::with('guests')->where('code', $request->invitation_code)->first();
     return Inertia::render('Home',
         [
+            'submitted_be' => $invitation?->guests()->where('attending', true)->count() >= 1,
             'code' => $request->invitation_code ?? null,
             'people' => $invitation?->guests->map(fn($guest) => $guest->toArray())
         ]);

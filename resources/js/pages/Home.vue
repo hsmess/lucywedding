@@ -11,6 +11,7 @@ import Gallery from '@/pages/Gallery.vue';
 import Itinerary from '@/pages/Itinerary.vue';
 
 const props = defineProps<{
+    submitted_be?: boolean;
     code?: string;
     people?: Guest[];
 }>();
@@ -25,13 +26,13 @@ const props = defineProps<{
         <!-- Page content -->
         <main class="grow mb-6">
             <Hero />
+            <Form :submitted_be="props.submitted_be" :code="props.code" :people="props.people"/>
             <Venue />
             <Gallery />
             <Hotels/>
             <Itinerary/>
             <Registry/>
             <Taxis/>
-            <Form :code="props.code" :people="props.people"/>
 
             <!-- Other sections will go here -->
         </main>
