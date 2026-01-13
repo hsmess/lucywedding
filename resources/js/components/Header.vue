@@ -16,31 +16,35 @@
                     <!-- Desktop navigation links -->
                     <ul class="flex grow justify-end flex-wrap items-center gap-8">
                         <li>
-                            <a href="#home" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                            <a href="/" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#venue" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                            <a href="/#venue" target="_self" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
                                 Venue
                             </a>
                         </li>
                         <li>
-                            <a href="#hotels" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                            <a href="/#hotels" target="_self" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
                                 Hotels
                             </a>
                         </li>
                         <li>
-                            <a href="#itinerary" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                            <a href="/#itinerary" target="_self" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
                                 Itinerary
                             </a>
                         </li>
                         <li>
-                            <a href="#taxis" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                            <a href="/#taxis" target="_self" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
                                 Taxis
                             </a>
                         </li>
-
+                        <li>
+                            <a href="/faqs" class="font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors">
+                                FAQs
+                            </a>
+                        </li>
 
                     </ul>
                 </nav>
@@ -69,7 +73,8 @@
                 <ul class="flex flex-col space-y-4">
                     <li>
                         <a
-                            href="#home"
+                            href="/#home"
+                            target="_self"
                             @click="mobileMenuOpen = false"
                             class="block font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors"
                         >
@@ -78,7 +83,8 @@
                     </li>
                     <li>
                         <a
-                            href="#venue"
+                            href="/#venue"
+                            target="_self"
                             @click="mobileMenuOpen = false"
                             class="block font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors"
                         >
@@ -87,7 +93,8 @@
                     </li>
                     <li>
                         <a
-                            href="#itinerary"
+                            href="/#itinerary"
+                            target="_self"
                             @click="mobileMenuOpen = false"
                             class="block font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors"
                         >
@@ -96,7 +103,8 @@
                     </li>
                     <li>
                         <a
-                            href="#rsvp"
+                            href="/#rsvp"
+                            target="_self"
                             @click="mobileMenuOpen = false"
                             class="block font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors"
                         >
@@ -105,11 +113,21 @@
                     </li>
                     <li>
                         <a
-                            href="#registry"
+                            href="/#registry"
+                            target="_self"
                             @click="mobileMenuOpen = false"
                             class="block font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors"
                         >
                             Registry
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/faqs"
+                            @click="mobileMenuOpen = false"
+                            class="block font-montaga text-[#2B1105] hover:text-[#2B1105]/70 transition-colors"
+                        >
+                            FAQs
                         </a>
                     </li>
                 </ul>
@@ -122,4 +140,12 @@
 import { ref } from 'vue';
 
 const mobileMenuOpen = ref(false);
+
+const handleAnchorClick = (e: MouseEvent, hash: string) => {
+    e.preventDefault();
+    window.location.href = `/${hash}`;
+    setTimeout(() => {
+        window.location.reload();
+    }, 100);
+};
 </script>

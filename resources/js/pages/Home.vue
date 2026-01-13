@@ -6,15 +6,27 @@ import Hotels from '@/pages/Hotels.vue';
 import Registry from '@/pages/Registry.vue';
 import Taxis from '@/pages/Taxis.vue';
 import Form from '@/pages/Form.vue';
-import Footer from '@/pages/Footer.vue';
 import Gallery from '@/pages/Gallery.vue';
 import Itinerary from '@/pages/Itinerary.vue';
+import { onMounted } from 'vue';
 
 const props = defineProps<{
     submitted_be?: boolean;
     code?: string;
     people?: Guest[];
 }>();
+
+onMounted(() => {
+    // Check if there's a hash in the URL and scroll to it
+    if (window.location.hash) {
+        setTimeout(() => {
+            const element = document.querySelector(window.location.hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+    }
+});
 </script>
 
 <template>

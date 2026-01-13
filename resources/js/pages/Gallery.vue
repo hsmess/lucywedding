@@ -10,8 +10,8 @@ const photos = ref<Photo[]>([
     { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/82707EAE-117A-407D-B46F-A6ADA6E8952B.jpeg', caption: 'Engagement day!' },
     { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/02A275A8-4913-42FC-ADD1-1ED1155792DD.jpeg', caption: 'Halloween party' },
     { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/B2CA8CDB-9F25-45EA-A1E4-F0F296AB9A0F.jpeg', caption: 'Day out in Edinburgh' },
-    { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/7162A8DE-28C8-4835-A2CE-0D16C48B555F.jpeg', caption: 'Happy times' },
-    { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/9AA8D918-54AD-4EBF-B914-8D819169FACC.jpeg', caption: 'A day out' },
+    { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/7162A8DE-28C8-4835-A2CE-0D16C48B555F.jpeg', caption: 'Lucy & Greg take on Amsterdam!' },
+    { url: 'https://aardvark-cdn.s3.eu-west-2.amazonaws.com/9AA8D918-54AD-4EBF-B914-8D819169FACC.jpeg', caption: 'Winter is coming' },
     // Add more photos as needed
 ]);
 

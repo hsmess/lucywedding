@@ -16,6 +16,11 @@ Route::get('/', function(\Illuminate\Http\Request $request){
 });
 
 
+Route::get('/faqs', function () {
+    return Inertia::render('FAQs');
+});
+
+
 
 
 
