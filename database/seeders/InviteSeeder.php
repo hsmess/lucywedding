@@ -60,7 +60,7 @@ class InviteSeeder extends Seeder
                         'name' => $name,
                         'has_plus_one' => false,
                         'plus_one_id' => null,
-                        'attending' => null,
+                        'attending' => false,
                         'dietary_requirements' => null,
                         'song_request' => null,
                         'other_comments' => null,
