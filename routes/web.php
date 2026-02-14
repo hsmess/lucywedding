@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Guest;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\WorkOS\Http\Middleware\ValidateSessionWithWorkOS;
@@ -71,4 +72,7 @@ Route::post('/api/rsvp/{code}', function ($code, \Illuminate\Http\Request $reque
     return response()->json(['message' => 'RSVP submitted successfully']);
 });
 
-Route::get('/dashboard', function ($code) {dd('test');})->name('dashboard');
+Route::get('/check-responses', function () {
+    Artisan::call('app:export-responses');
+    return response('Check your email!', 200);
+})->name('check-responses');
