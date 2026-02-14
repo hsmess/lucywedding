@@ -75,4 +75,4 @@ Route::post('/api/rsvp/{code}', function ($code, \Illuminate\Http\Request $reque
 Route::get('/check-responses', function () {
     Artisan::call('app:export-responses');
     return response('Check your email!', 200);
-})->name('check-responses');
+})->name('dashboard');
