@@ -73,6 +73,15 @@ Route::post('/api/rsvp/{code}', function ($code, \Illuminate\Http\Request $reque
 });
 
 Route::get('/check-responses', function () {
+    $files = glob(storage_path('export_*.csv'));
+    $recentExport = collect($files)->contains(function ($file) {
+        return filemtime($file) > now()->subMinutes(15)->timestamp;
+    });
+
+    if ($recentExport) {
+        return response('Export already run in the last 15 minutes', 429);
+    }
+
     Artisan::call('app:export-responses');
     return response('Check your email!', 200);
 })->name('dashboard');
