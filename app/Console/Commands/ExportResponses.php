@@ -32,7 +32,7 @@ class ExportResponses extends Command
                 'name' => $guest->name,
                 'attending' => $guest->attending ? 'Yes' : 'No',
                 'dietary requirements' => $guest->dietary_requirements ?? '',
-                'song request' => $guest->song_request ?? ($guest->attending ? $this->randomColdplaySong() : ''),
+                'song request' => $guest->song_request ?? '',
                 'other comments' => $guest->other_comments ?? '',
                 'date updated' => $guest->updated_at->format('d/m/Y')
             ]);
